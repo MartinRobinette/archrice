@@ -1,0 +1,84 @@
+#
+# wm independent hotkeys
+#
+
+# Terminal
+super + Return 
+	st
+# Application launcher
+super + @space
+	dmenu_run
+super + d 
+	dmenu_run
+# Web browser
+super + w
+	firefox
+super + shift + w
+	qutebrowser
+# Notes
+super + n
+	joplin-desktop	
+
+#
+# focus and swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its sides outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0, bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by movins one of its sides inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# full screen
+super + f
+	bspc node -t ~fullscreen
+
+# close and kill
+super + {_,shift + }q
+	bspc node -{c,k}
+
+#
+# Volume Control
+#
+
+XF86AudioRaiseVolume
+	amixer set Master 5%+
+XF86AudioLowerVolume
+	amixer set Master 5%-
+super + m
+	amixer set Master toggle
+
+#
+# Power Management
+#
+
+super + F9
+	shutdown now
+super + F10
+	reboot
+# Hibernate
+super + F4
+	prompt 'Hibernate computer?' 'sudo -A zzz -Z'
+
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
