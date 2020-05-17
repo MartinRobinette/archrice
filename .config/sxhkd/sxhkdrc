@@ -13,11 +13,18 @@ super + d
 # Web browser
 super + w
 	firefox
+# Change Wallpaper
 super + shift + w
-	qutebrowser
+	nitrogen --random
 # Notes
 super + n
 	joplin-desktop	
+# Wallpaper Select
+super + shift + n
+	nitrogen
+# Pcmanfm
+super + p
+	pcmanfm
 
 #
 # focus and swap
@@ -54,6 +61,9 @@ super + f
 # close and kill
 super + {_,shift + }q
 	bspc node -{c,k}
+# Floating Toggle
+super + t
+	bspc node -t ~floating
 
 #
 # Volume Control
