@@ -20,7 +20,7 @@ foreground = ${xrdb:color257:#ebdbb2}
 
 [bar/default]
 width = 100%
-height = 24
+height = 20
 
 background = ${colors.background}
 foreground = ${colors.foreground}
