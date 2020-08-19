@@ -4,7 +4,7 @@
 
 # Terminal
 super + Return 
-	st
+	alacritty
 # Application launcher
 super + @space
 	dmenu_run
@@ -15,16 +15,28 @@ super + w
 	firefox
 # Change Wallpaper
 super + shift + w
-	nitrogen --random
+	nitrogen --random --set-scaled
 # Notes
 super + n
 	joplin-desktop	
-# Wallpaper Select
+# Netflix
 super + shift + n
-	nitrogen
+	firefox firefox https://www.netflix.com/browse
 # Pcmanfm
 super + p
 	pcmanfm
+# steam
+super + s
+	steam
+# volume - pulse audio volume control
+super + v
+	pavucontrol
+# Nitrogen
+# Finance spreadsheet
+super + shift + f
+	gnumeric ~/Documents/Finance/Finances.gnumeric
+
+
 
 #
 # focus and swap
@@ -61,9 +73,11 @@ super + f
 # close and kill
 super + {_,shift + }q
 	bspc node -{c,k}
+
 # Floating Toggle
 super + t
 	bspc node -t ~floating
+
 
 #
 # Volume Control
