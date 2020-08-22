@@ -35,6 +35,9 @@ super + v
 # Finance spreadsheet
 super + shift + f
 	gnumeric ~/Documents/Finance/Finances.gnumeric
+# Remap keyboard if not plugged in on boot
+super + shift + s
+	setxkbmap -option caps:super
 
 
 
